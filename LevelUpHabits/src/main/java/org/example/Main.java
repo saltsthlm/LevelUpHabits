@@ -29,19 +29,13 @@ public class Main {
                 newHabit = habitManager.createHabit(habitName, diffLevel);
             }
             if(option == 2){
-                habitManager.markAsCompleted();
+                habitManager.markAsCompleted(newUser, newHabit);
 
             }
-            if(option == 1){
+            if(option == 3){
 
             }
-            if(option == 1){
-
-            }
-            if(option == 1){
-
-            }
-            if(option == 1){
+            else{
 
             }
 
@@ -49,13 +43,6 @@ public class Main {
 
         System.out.println("Exiting .....");
 
-        //1. create a habit
-        //2. mark a habit as done
-        //3. view habit streaks
-        //4. view xp & level
-        //5. exit
-
         scanner.close();
-
     }
 }

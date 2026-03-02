@@ -16,9 +16,13 @@ public class HabitManager {
     public void markAsCompleted(User user, Habit habit){
         List<Habit> habits = user.getHabits();
         if(habits.contains(habit)){
+            updateXP_(user, habit);
             habit.markComplete(true);
         }
-
+    }
+    public void updateXP_(User user, Habit habit){
+        int scoreThreshold = habit.getxP();
+        user.updateTotalXP(scoreThreshold);
     }
 
 
