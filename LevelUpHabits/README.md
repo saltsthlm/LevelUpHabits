@@ -41,3 +41,8 @@ A gamified habit tracker that helps users build and maintain daily habits. Users
 - Use object-oriented principles: classes, encapsulation, composition, and optionally inheritance.
 - Keep the system modular for future expansion.
 - Focus on creating a meaningful gamified experience for real-life habit tracking.
+
+---
+
+## Level Notes
+![](/Images/Levels.png)
