@@ -20,9 +20,7 @@ public class HabitManager {
     public void updateXP(User user, Habit habit){
         int scoreThreshold = habit.getxP();
         user.updateTotalXP(scoreThreshold);
-    }
-    public void updateLevel(User user){
-        user.getTotalXP()
+        user.updateCurrentLevel(user.getTotalXP());
     }
 
 
