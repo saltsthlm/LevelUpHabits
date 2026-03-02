@@ -11,6 +11,7 @@ public class HabitManager {
         System.out.println("Enter difficulty level from (1, 2, 3): ");
         int diffLevel = scanner.nextInt();
         Habit newHabit = new Habit(nameGiven,diffLevel);
+        scanner.close();
         return newHabit;
     }
     public void addHabitToUser(User user, Habit habit){
@@ -21,5 +22,4 @@ public class HabitManager {
     }
 
 
-    scanner.close();
 }

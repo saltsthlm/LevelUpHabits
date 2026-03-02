@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -8,7 +9,7 @@ public class User {
     private int totalXP = 0;
 
 
-    private List<Habit> habits;
+    private List<Habit> habits = new ArrayList<>();
 
     public User(String name){
         this.name = name;
