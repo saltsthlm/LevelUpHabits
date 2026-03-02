@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class HabitManager {
     public Habit createHabit(String nameGiven, int diffLevel){
-        return new Habit(nameGiven,diffLevel);;
+        return new Habit(nameGiven,diffLevel);
     }
     public void addHabitToUser(User user, Habit habit){
         user.addHabits(habit);
@@ -20,6 +20,9 @@ public class HabitManager {
     public void updateXP(User user, Habit habit){
         int scoreThreshold = habit.getxP();
         user.updateTotalXP(scoreThreshold);
+    }
+    public void updateLevel(User user){
+        user.getTotalXP()
     }
 
 

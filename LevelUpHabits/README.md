@@ -45,4 +45,9 @@ A gamified habit tracker that helps users build and maintain daily habits. Users
 ---
 
 ## Level Notes
-![](/Images/Levels.png)
+Total 5 levels.
+Level 1 : 0 - 49 XP
+Level 2 : 50 - 99 XP
+Level 3 : 100 - 149 XP
+Level 4 : 150 - 199 XP
+Level 5 : 200+ XP
