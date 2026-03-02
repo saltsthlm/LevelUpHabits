@@ -63,7 +63,7 @@ public class Habit {
         return isComplete;
     }
 
-    public void markComplete(boolean complete) {
+    public void markComplete() {
         isComplete = true;
     }
 

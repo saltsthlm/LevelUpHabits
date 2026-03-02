@@ -27,12 +27,12 @@ public class User {
         return habits;
     }
 
-    public void updateTotalXP(int totalXP) {
-        this.totalXP += totalXP;
+    public void updateTotalXP(int xp) {
+        this.totalXP += xp;
     }
 
-    public void updateCurrentLevel(int currentLevel) {
-        this.currentLevel = currentLevel;
+    public void updateCurrentLevel(int level) {
+        this.currentLevel = level;
     }
 
     public void addHabits(Habit habit) {
