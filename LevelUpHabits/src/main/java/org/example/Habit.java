@@ -2,7 +2,7 @@ package org.example;
 
 public class Habit {
 
-    //1-10 difficulty level
+    //difficulty level - easy, medium , hard, 0, 1, 2
     //Streak start from 0
     //XP reward start from 0
     private int difficulty = 0;
@@ -11,8 +11,29 @@ public class Habit {
     private boolean isComplete = false;
     private final String name;
 
-    public Habit(String name){
+    private final int easy = 1;
+    private final int medium = 2;
+    private final int hard = 3;
+    private final int easyXP = 10;
+    private final int mediumXP = 20;
+    private final int hardXP = 50;
+
+
+
+    public Habit(String name, int difficulty){
         this.name = name;
+        this.difficulty = difficulty;
+        switch (difficulty){
+            case medium:
+                this.xP = mediumXP;
+                break;
+            case hard:
+                this.xP = hardXP;
+                break;
+            default:
+                this.xP = easyXP;
+        }
+
     }
 
     public int getDifficulty() {
@@ -42,8 +63,8 @@ public class Habit {
         return isComplete;
     }
 
-    public void setComplete(boolean complete) {
-        isComplete = complete;
+    public void markComplete(boolean complete) {
+        isComplete = true;
     }
 
     public String getName() {
