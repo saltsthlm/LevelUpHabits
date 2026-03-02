@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -30,8 +31,14 @@ public class Main {
                 System.out.println("Habit '" + habitName + "' added!");
             }
             else if(option == 2){
-                if(user.getHabits().size() > 0){
-                    Habit habitToComplete = user.getHabits().get(0);
+                List<Habit>  habitList= user.getHabits();
+                if(!habitList.isEmpty()){
+                    System.out.println("Which habit to mark complete?");
+                    for(int i = 0; i<habitList.size(); i++){
+                        System.out.println(i+1 + ". " + habitList.get(i).getName() + "\n");
+                    }
+                    int whichHabit = scanner.nextInt();
+                    Habit habitToComplete = user.getHabits().get(whichHabit-1);
                     habitManager.markAsCompleted(user, habitToComplete);
                     System.out.println("Habit '"+ habitToComplete.getName() +"' marked complete!");
                 }
