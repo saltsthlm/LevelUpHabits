@@ -8,7 +8,7 @@ public class Habit {
     private int difficulty = 0;
     private int streak = 0;
     private int xP = 0;
-    private boolean isComplete = false;
+    private boolean isComplete;
     private final String name;
 
     private final int easy = 1;
@@ -22,6 +22,7 @@ public class Habit {
     public Habit(String name, int difficulty){
         this.name = name;
         this.difficulty = difficulty;
+        this.isComplete = false;
         switch (difficulty){
             case medium:
                 this.xP = mediumXP;
