@@ -36,23 +36,12 @@ public class Habit {
 
     }
 
-    public int getDifficulty() {
-        return difficulty;
-    }
-    public void setDifficulty(int change) {
-        difficulty = change;
-    }
-
     public int getStreak() {
         return streak;
     }
 
     public void updateStreak() {
         streak += 1;
-    }
-
-    public void setxP(int xP) {
-        this.xP = xP;
     }
 
     public int getxP() {

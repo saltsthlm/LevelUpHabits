@@ -10,6 +10,9 @@ public class HabitManager {
     public void addHabitToUser(User user, Habit habit){
         user.addHabits(habit);
     }
+    public void removeHabitFromUser(User user, Habit habit){
+        user.removeHabits(habit);
+    }
     public void markAsCompleted(User user, Habit habit){
         List<Habit> habits = user.getHabits();
         if(habits.contains(habit)){
