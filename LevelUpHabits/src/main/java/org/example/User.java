@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.List;
-import java.util.Objects;
 
 public class User {
     private final String name;
@@ -27,11 +26,11 @@ public class User {
         return habits;
     }
 
-    public void setTotalXP(int totalXP) {
-        this.totalXP = totalXP;
+    public void updateTotalXP(int totalXP) {
+        this.totalXP += totalXP;
     }
 
-    public void setCurrentLevel(int currentLevel) {
+    public void updateCurrentLevel(int currentLevel) {
         this.currentLevel = currentLevel;
     }
 
