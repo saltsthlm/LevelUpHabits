@@ -5,19 +5,50 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
+        Habit newHabit;
 
-        System.out.println("Starting LevelUpHabit now..../n \"Enter a user's name to create user: ");
+        System.out.println("Starting LevelUpHabit now....\nEnter a user's name to create user: ");
         String userName = scanner.next();
         User newUser = new User(userName);
 
         HabitManager habitManager = new HabitManager();
+        int option = 1;
+        do{
+            System.out.println("Choose one of the following options by entering a number:");
+            System.out.println("1. Create a habit.");
+            System.out.println("2. Mark a habit as Done.");
+            System.out.println("3. View Habit Streaks.");
+            System.out.println("4. View your XP & levels.");
+            System.out.println("5. Exit.");
+            option = scanner.nextInt();
+            if(option == 1){
+                System.out.println("Enter a habit's name to create habit: ");
+                String habitName = scanner.next();
+                System.out.println("Enter difficulty level from (1, 2, 3): ");
+                int diffLevel = scanner.nextInt();
+                newHabit = habitManager.createHabit(habitName, diffLevel);
+            }
+            if(option == 2){
+                habitManager.markAsCompleted();
 
-        System.out.println("Enter a habit's name to create habit: ");
-        String habitName = scanner.next();
-        System.out.println("Enter difficulty level from (1, 2, 3): ");
-        int diffLevel = scanner.nextInt();
-        Habit newHabit = habitManager.createHabit(habitName, diffLevel);
-        System.out.println(newHabit);
+            }
+            if(option == 1){
+
+            }
+            if(option == 1){
+
+            }
+            if(option == 1){
+
+            }
+            if(option == 1){
+
+            }
+
+        }while(option != 5);
+
+        System.out.println("Exiting .....");
+
         //1. create a habit
         //2. mark a habit as done
         //3. view habit streaks

@@ -12,7 +12,7 @@ public class HabitManager {
     public void addHabitToUser(User user, Habit habit){
         user.addHabits(habit);
     }
-    public void markAsCompleted(){
+    public void markAsCompleted(User user, Habit habit){
 
     }
 
