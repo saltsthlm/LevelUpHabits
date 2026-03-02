@@ -13,7 +13,12 @@ public class HabitManager {
         Habit newHabit = new Habit(nameGiven,diffLevel);
         return newHabit;
     }
-    public
+    public void addHabitToUser(User user, Habit habit){
+        user.addHabits(habit);
+    }
+    public void markAsCompleted(){
+
+    }
 
 
     scanner.close();
