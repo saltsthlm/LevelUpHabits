@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class HabitManager {
@@ -13,6 +14,10 @@ public class HabitManager {
         user.addHabits(habit);
     }
     public void markAsCompleted(User user, Habit habit){
+        List<Habit> habits = user.getHabits();
+        if(habits.contains(habit)){
+            habit.markComplete(true);
+        }
 
     }
 
