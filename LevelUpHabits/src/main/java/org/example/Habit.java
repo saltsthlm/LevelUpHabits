@@ -47,8 +47,8 @@ public class Habit {
         return streak;
     }
 
-    public void setStreak(int streak) {
-        this.streak = streak;
+    public void updateStreak() {
+        streak += 1;
     }
 
     public void setxP(int xP) {

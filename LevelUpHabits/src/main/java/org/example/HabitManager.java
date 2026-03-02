@@ -14,6 +14,9 @@ public class HabitManager {
         List<Habit> habits = user.getHabits();
         if(habits.contains(habit)){
             updateXP(user, habit);
+            if(habit.getStreak()== 0 || habit.isComplete()) {
+                habit.updateStreak();
+            }
             habit.markComplete();
         }
     }
