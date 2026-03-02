@@ -19,7 +19,6 @@ public class Habit {
     private final int hardXP = 50;
 
 
-
     public Habit(String name, int difficulty){
         this.name = name;
         this.difficulty = difficulty;
@@ -70,10 +69,4 @@ public class Habit {
     public String getName() {
         return name;
     }
-
-    //Add
-    //Remove
-    //View
-
-
 }

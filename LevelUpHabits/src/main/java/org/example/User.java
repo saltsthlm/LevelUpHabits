@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.List;
+import java.util.Objects;
 
 public class User {
     private final String name;
@@ -36,5 +37,9 @@ public class User {
 
     public void addHabits(Habit habit) {
         habits.add(habit);
+    }
+
+    public void removeHabits(Habit habit) {
+        habits.remove(habit);
     }
 }
