@@ -12,7 +12,7 @@ public class Main {
         User user = new User(userName);
 
         HabitManager habitManager = new HabitManager();
-        int option;
+        int option = 0;
         do{
             System.out.println("\nChoose one of the following options by entering a number:");
             System.out.println("1. Create a habit.");
@@ -21,7 +21,18 @@ public class Main {
             System.out.println("4. View Habit Streaks.");
             System.out.println("5. View your XP & levels.");
             System.out.println("6. Exit.");
-            option = scanner.nextInt();
+            try {
+                option = scanner.nextInt();
+            } catch (Exception e) {
+                System.out.println("Invalid input! Enter a number between 1 and 6.");
+                scanner.next(); // consume wrong input
+                continue;
+            }
+            if(option < 1 || option > 6) {
+                System.out.println("Invalid option! Choose 1-6.");
+                continue;
+            }
+
             if(option == 1){
                 System.out.println("Enter a habit's name to create habit: ");
                 String habitName = scanner.next();
@@ -39,6 +50,10 @@ public class Main {
                         System.out.println(i+1 + ". " + habitList.get(i).getName() + "\n");
                     }
                     int whichHabit = scanner.nextInt();
+                    if(whichHabit<1 || whichHabit>habitList.size()) {
+                        System.out.println("Invalid selection!");
+                        continue;
+                    }
                     Habit habitToComplete = user.getHabits().get(whichHabit-1);
                     habitManager.markAsCompleted(user, habitToComplete);
                     System.out.println("Habit '"+ habitToComplete.getName() +"' marked complete!");
@@ -55,6 +70,10 @@ public class Main {
                         System.out.println(i+1 + ". " + habitList.get(i).getName() + "\n");
                     }
                     int whichHabit = scanner.nextInt();
+                    if(whichHabit<1 || whichHabit>habitList.size()) {
+                        System.out.println("Invalid selection!");
+                        continue;
+                    }
                     Habit habitToRemove = user.getHabits().get(whichHabit-1);
                     habitManager.removeHabitFromUser(user, habitToRemove);
                     System.out.println("Habit '"+ habitToRemove.getName() +"' removed!");

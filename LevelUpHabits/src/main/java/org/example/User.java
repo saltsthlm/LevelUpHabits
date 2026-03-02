@@ -31,7 +31,8 @@ public class User {
         this.totalXP += xp;
     }
 
-    public void updateCurrentLevel(int xp) {
+    public void updateCurrentLevel() {
+        int xp =getTotalXP();
         if(xp <= 49){currentLevel = 1;}
         else if(xp <= 99){currentLevel = 2;}
         else if(xp <= 149){currentLevel = 3;}
