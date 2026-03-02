@@ -2,7 +2,7 @@ package org.example;
 
 public class Habit {
 
-    //difficulty level - easy, medium , hard, 0, 1, 2
+    //difficulty level - easy, medium , hard, 1, 2, 3
     //Streak start from 0
     //XP reward start from 0
     private int difficulty = 0;

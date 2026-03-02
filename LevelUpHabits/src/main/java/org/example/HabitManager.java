@@ -3,14 +3,18 @@ package org.example;
 import java.util.Scanner;
 
 public class HabitManager {
+    Scanner scanner = new Scanner(System.in);
     //Manages adding/removing habits, marking completion, calculating streaks and XP, and leveling users.
     public Habit createHabit(){
         System.out.println("Enter a habit's name to create habit: ");
-        Scanner scanner = new Scanner(System.in);
         String nameGiven = scanner.next();
-
-        Habit newHabit = new Habit(nameGiven);
-        scanner.close();
+        System.out.println("Enter difficulty level from (1, 2, 3): ");
+        int diffLevel = scanner.nextInt();
+        Habit newHabit = new Habit(nameGiven,diffLevel);
         return newHabit;
     }
+    public
+
+
+    scanner.close();
 }
